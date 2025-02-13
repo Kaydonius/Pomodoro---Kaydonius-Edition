@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>KaydoniusCam</title>
+
+        <!-- This is the style element. Since my header is name h1, thats whats being affected. I can control the style of different parts of my webpage via style
+         and the names of my elements. h1 is for the header. body to body, and container for div id = container. These are all things that have already been defined. Container
+         is where the video will go. -->
+        <style>
+            h1{
+                font-family: sans-serif;
+                color: darkblue;
+            }
+            body{
+                margin: 50px;
+            }
+
+            #container{
+                margin: 0px auto;
+                width: 500px;
+                height: 375px;
+                border: 10px solid black;
+            }
+
+            #videoElement{
+              width: 500px;
+              height: 375px;
+              background-color: darkgray;  
+            }
+        </style>
+    </head>
+    <body>
+        <!-- this is a header. It displays text/whatever defined at the top of the page -->
+        <h1>KAYDONIUSCAM VER. 1.0</h1>
+        <div id="container">
+            <!-- inside of this div is a video element. This is responsible for taking data from webcam and displaying it. -->
+             <!-- setting autplay to true means user doesn't need to input anything to get their webcam goin -->
+             <video autoplay="true" id="videoElement">
+
+             </video>
+        </div>
+        <script>
+            // Now its time for the actual javascript that will define the functionality of the webcam.
+            // Will add tomorrow lol. Bed time
+        </script>
+    </body>
+</html>
