@@ -44,7 +44,25 @@
         </div>
         <script>
             // Now its time for the actual javascript that will define the functionality of the webcam.
-            // Will add tomorrow lol. Bed time
+            // Will add tomorrow lol
+            let video = document.querySelector("#videoElement"); //remember the videoElement is the id of our video 
+            //now we need to use the getusermedia API. It can be accessed by using navigator.mediaDevices singleton object that gives us methods
+            //for accessing camera
+            // Below, the following happens: Make sure the webcam access is suported by the browser, if not we print that its not supported.
+            // Next, in getusermedia video true, we ask for permission. If access is granted, we assign the video live stream to the 
+            // video object and play the video. If for any reason the user denies video, or no webcam is found, we handle the error
+            if (navigator.mediaDevices.getUserMedia){
+                navigator.mediaDevices.getUserMedia( {video: true} ).then(function (stream) {
+                    video.srcObject = stream;
+                    video.play();
+                })
+                .catch (function (error) {
+                    console.log("Something went wrong");
+                })
+            }else{
+                console.log("Getusermedia not supported");
+            }
+
         </script>
     </body>
 </html>
